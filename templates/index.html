@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	 <link href="/css/style.css" rel="stylesheet">
+     <title>This Is a test</title>
+</head>
+
+<body background-color: black	color: white>
+   {% block content %}
+   <h1> Author: Sarah Harber</h1>
+   <h2>Purpose: This website is for CS496 at Oregon State University to test OAuth 2.0.  </h2>
+   <p>This website will solely obtain the first name, last name, and URL to the Google + Account associated to log in.  It will also return the state variable that was used to secure origional redirect.</p>
+
+   <a href="{{ request_url }}"><button>Click here to Start Google+ OAuth 2.0 Processes</button></a>
+   {% endblock %}
+
+   <h3>First Name: {{ f_name }} </h3>
+   <h3>Last Name: {{ l_name }} </h3>
+   <h3>State: {{ final_state }} </h3>
+   <h3>Google+ URL: {{ google_url }} </h3>
+</body>
+</html>
